@@ -8,7 +8,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 */6 * * *'#Relance toutes les 6 heures
+    - cron: '0 */6 * * *'# BY S-TEN
     
 jobs:
   build:
@@ -36,8 +36,8 @@ jobs:
       
     - name: Start application with timeout
       run:
-      timeout 21590s npm start #limite l’exécution à 5h59m 50s
+        timeout 21590s npm start #limite l’exécution à 5h59m 50s
         
-    - name:Save state (Optinale)
-      run 
-      ./save_state.sh
+    - name: Save state (Optinale)
+      run: 
+        ./save_state.sh
